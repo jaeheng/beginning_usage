@@ -12,7 +12,7 @@ function plugin_setting_view() {
     $url = BLOG_URL . '/admin/plugin.php?plugin=beginning_usage&page=';
     $pagination = pagination($count, $perlogs, $page, $url, $anchor = '');
 
-    $data = $db->query('select * from ' . DB_PREFIX . 'beginning_usage limit ' . ($perlogs * ($page - 1)) . ', ' . $perlogs);
+    $data = $db->query('select * from ' . DB_PREFIX . 'beginning_usage order by id desc limit ' . ($perlogs * ($page - 1)) . ', ' . $perlogs);
 
 	?>
     <div class="d-sm-flex align-items-center justify-content-between mb-4">

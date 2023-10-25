@@ -14,6 +14,11 @@ Author URL: https://blog.phpat.com
 $url = Input::getStrVar('url', 'unkown');
 $blogname = Input::getStrVar('blogname', 'unkown');
 $type = Input::getStrVar('type', 'unkown');
+$url_type = Input::getStrVar('url_type', 'normal');
+
+if ($url_type === 'base64') {
+    $url = base64_decode($url);
+}
 
 $db = Database::getInstance();
 $res = $db->query("select * from " . DB_PREFIX . "beginning_usage where url = '{$url}' and type='{$type}'");

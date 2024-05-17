@@ -1,0 +1,6 @@
+<?php
+// 配置文件
+$beginning_usage_config = [
+    // 销售列表文件
+    'emlog_store_list_path' => ''
+];

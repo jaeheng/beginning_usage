@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: 模版使用情况
-Version: 1.1
+Version: 1.1.2
 Plugin URL:
 Description: 接收并统计自研模版使用情况
 Author: jaeheng

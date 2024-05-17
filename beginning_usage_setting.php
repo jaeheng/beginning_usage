@@ -87,8 +87,9 @@ function plugin_setting_view() {
             <div class="card-title">模版销售情况</div>
             <?php
             // 模版销售情况
-            $content = file_get_contents("/Users/zhangjiawei/Documents/大健康项目/emlog.txt");
+            require_once EMLOG_ROOT . '/content/plugins/beginning_usage/beginning_usage_config.php';
 
+            $content = file_get_contents($beginning_usage_config['emlog_store_list_path']);
             $content = explode("\n", trim($content));
 
             $data = [];

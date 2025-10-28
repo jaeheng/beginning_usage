@@ -128,7 +128,11 @@ function plugin_setting_view()
         } else {
             $data[$k] = (float)$v[2];
         }
-        @$product[mb_substr($v[1], 5)] += (float)$v[2];
+        $key = $v[1];
+        if (mb_substr($v[1], 0, 2) === '购买') {
+            $key = mb_substr($v[1], 5);
+        }
+        @$product[$key] += (float)$v[2];
     }
     $template_stat = [
         'x' => array_keys($data),
